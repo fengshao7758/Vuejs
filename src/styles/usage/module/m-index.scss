@@ -1,0 +1,63 @@
+.m-index {
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex();
+    @import './common';
+    height: 100%;
+    header{
+        height: .44rem;
+        background: green;
+        ul{
+            @include flexbox();
+            height: 100%;
+            li: first-child,                
+            li:last-child{
+                width: .44rem;
+                height: 100%;
+                line-height: .44rem;
+                text-align: center;
+                font-size: .24rem;
+                background: $base-color;
+                color: rgba(255,255,255,0.6);
+            }
+            li:nth-child(2){
+                @include flexbox();
+                @include felxbox();
+                @include justify-content();
+                @include align-items();
+                span{
+                    display: inlin-block;
+                    width: .59rem;
+                    height: .25rem;
+                    text-align: center;
+                    line-height: .25rem;
+                    color:rgba(255,255,255,0.6);
+                    background:rgba(100,217,100,0.6);
+                    &:first-child{
+                        border-radius: .1rem 0 0 .1rem;
+                        
+                    }
+                    &:last-child{
+                        border-radius: .1rem 0 0 .1rem;
+                        
+                    }
+                    &.active{
+                        background: #64d985;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    section{
+        background: red;
+        width: 100%;
+    }
+    footer{
+        height: .44rem;
+        background: blue;
+    }
+    >*{
+        width: 100%;
+    }
+}
